@@ -9,6 +9,11 @@ $(document).ready(function(){
             fullname = $('#name').val()
             email = $('#email').val()
             phone = $('#phone').val()
+            if(fullname == "" || email == "" || phone == ""){
+              alert('Input all details')
+              return false
+              
+            }  
             makePayment(amount,desc,fullname,email,phone)
         })
     })
@@ -42,6 +47,5 @@ $(document).ready(function(){
             logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
           },
         });
-      }
-
+      }    
 })
